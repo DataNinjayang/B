@@ -1143,6 +1143,27 @@ def main():
             st.info(f"🏢 企业总数：{len(company_list)} 家")
             st.info(f"📅 数据年份：2015-2020年")
             st.info(f"📊 字段类型：基础ESG数据")
+        
+        # 新增：外部链接跳转按钮
+        st.markdown("### 🌐 外部链接")
+        st.markdown("""
+        <a href="https://digital-encomy-main.streamlit.app/" target="_blank" style="text-decoration: none;">
+            <button style="
+                width: 100%;
+                padding: 0.5rem 1rem;
+                background-color: #3b82f6;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+                margin-top: 10px;
+            ">
+                跳转至数字经济分析平台
+            </button>
+        </a>
+        """, unsafe_allow_html=True)
     
     # 显示结果
     if st.session_state.show_results and st.session_state.selected_company_data is not None:
